@@ -1,0 +1,23 @@
+
+\providecommand{\abstractname}{Abstract}
+# Preface {.unnumbered}
+
+Welcome to the first edition of "Basic Timeseries Analysis in EViews" This book is designed to be a valuable resource for undergraduate and postgraduate students as well as supervisors and faculty members who are new to EViews and eager to delve into the world of time series analysis in economics, finance, and accounting.
+
+**A Different Approach**: In writing this book, my aim is not to teach econometrics from scratch, assuming that you, the reader, already possess some knowledge in the field. Instead, my goal is to provide a clear and straightforward step-by-step guide to implementing major statistical analyses commonly used in time series analysis. I have witnessed many students, despite their advanced coursework in econometrics and statistics, grapple with the practical implementation of these essential tests. Traditional econometrics materials are often laden with mathematical and statistical jargon, offering limited guidance on how to apply these tests using software.
+
+**A Helping Hand**: It is my deep-rooted compassion for these students, particularly those embarking on the journey of writing their theses or dissertations, that led to the creation of this book. Drawing on my experience as a lecturer in the Department of Economics at Babcock University, Nigeria, I have had the privilege of teaching numerous undergraduate economics courses, including econometrics.
+
+**Author's Background**: I obtained my Bachelor's and Master's degrees in Economics from Babcock University and completed my PhD in Energy Economics at the Center for Petroleum, Energy Economics and Law (CPEEL), University of Ibadan. My journey with EViews spans over 12 years, during which I've developed a profound understanding of the software and its applications. In addition to EViews, I'm well-versed in other software tools like R, Stata, Python, and Gauss. My commitment to reproducible and replicable data analysis for research underscores the principles that guide this book.
+
+**What This Book Covers**: "Practical Time Series Analysis with EViews" covers a broad spectrum of topics, from the basics of importing and transforming data in EViews to more advanced techniques. You will find guidance on essential transformations, such as computing natural logarithms of variables, growth rates, returns, and much more. The book also provides detailed instructions on performing unit root tests and interpreting the results, conducting cointegration tests, and many other aspects of time series analysis.
+
+It is my sincere hope that this material will empower you to confidently perform the major tests and transformations required to complete your dissertation, thesis, or research paper. I aim to bridge the gap between theoretical knowledge and practical implementation, ensuring that you can navigate the challenges of time series analysis with ease.
+
+I invite you to embark on this journey with me and unlock the potential of EViews as a powerful tool for your time series analysis endeavors.
+
+Warm regards,
+
+Musa Dasauki
+
+![](images/singnature-01.jpg){width="85"}

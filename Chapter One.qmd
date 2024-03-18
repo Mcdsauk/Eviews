@@ -1,0 +1,175 @@
+# Getting Started with EViews
+
+Welcome to EViews -- your gateway to powerful statistical, time series analysis, forecasting, and modelling tools! Whether you are a financial institution, corporation, government agency, or academic researcher, EViews is here to empower you with a user-friendly and innovative platform for data analysis.
+
+## What is EViews?
+
+EViews is a renowned software package that provides access to a comprehensive suite of analytical tools for a wide range of applications. It is designed to cater to the needs of both seasoned professionals and newcomers in the field of econometrics, statistics, and data analysis. What sets EViews apart is its intuitive, object-oriented interface that simplifies complex analytical tasks and accelerates the decision-making process.
+
+![Data Importation](images/importdata1.png){fig-align="center" width="358"}
+
+## Why Choose EViews?
+
+EViews has established itself as the global leader in econometric software for several compelling reasons:
+
+Power and Ease of Use: EViews combines the power of advanced statistical techniques with an easy-to-learn interface. Whether you're conducting in-depth econometric research or simply need to perform routine data analysis, EViews is designed to make your tasks more efficient and effective.
+
+Continuous Innovation: With each new version, EViews enhances its capabilities and introduces cutting-edge features to stay at the forefront of data analysis. EViews 13 is no exception, offering a multitude of enhancements that expand your analytical toolkit.
+
+## What's New in EViews 13?
+
+EViews 13 builds upon its legacy by introducing an array of exciting new features and improvements, including:
+
+-   Bayesian Time-varying Coefficient Vector Autoregression: Explore dynamic rela-tionships in your data like never before.
+
+-   Non-linear ARDL Estimation: Uncover non-linear dependencies in your time series data.
+
+-   Difference-in-Difference Estimation: Conduct rigorous causal inference analysis.
+
+-   Cointegration Testing and Estimation Enhancements: Improve your understanding of long-run relationships.
+
+-   ARDL and PMG Diagnostics: Enhance the accuracy of your models.
+
+-   Daily Seasonal Adjustment: Handle daily data with precision.
+
+-   Improved Excel writing engine: Seamlessly exchange data with Excel.
+
+-   Multiple new online database connections: Access a wealth of external data sources.
+
+-   Pane and Tab alternative user interface: Customize your workspace for optimal pro-ductivity.
+
+-   Program Language Debugging: Debug your programs with ease.
+
+-   Jupyter Notebook Support: Integrate EViews with Jupyter for interactive analysis.
+
+Whether you're exploring the dynamics of financial markets, conducting empirical research, or making data-driven decisions in any field, EViews empowers you to unlock deeper insights from your data effortlessly. Join the worldwide community of EViews users who have made it their preferred choice for econometric analysis. Discover the possibilities, harness the power, and embark on your journey of data exploration and discovery with EViews.
+
+## Introduction to EViews interface and workspace
+
+The EViews interface is the gateway to a powerful world of data analysis, econometrics, and forecasting. Designed with both newcomers and seasoned professionals in mind, it offers a user-friendly and intuitive environment that simplifies complex tasks in statistical analysis. As we embark on a journey to explore the EViews interface, let's delve into the key elements that make it an invaluable tool for researchers, economists, analysts, and students alike.
+
+## Navigating the Workspace
+
+Upon launching EViews, users are greeted by a clean and organized workspace, where data, models, and results coexist harmoniously. The interface comprises several essential components:
+
+Menu Bar: Located at the top of the window, the menu bar provides access to a plethora of functions and tools organized into logical categories. It is the control center for executing commands, managing data, and customizing your EViews experience.
+
+Situated just below the menu bar, the toolbar offers quick access to frequently used features, enhancing efficiency in everyday tasks. Functions like data importing, graph creation, and model estimation are just a click away.
+
+-   Workfile Window: At the heart of EViews lies the workfile window, where data and objects reside. Users can create, open, and organize workfiles, each containing datasets, graphs, and models. This central workspace is where data analysis journeys begin.
+
+-   Object Explorer: The object explorer, typically located on the left side of the inter-face, provides a hierarchical view of the workfile's contents. It offers a convenient way to navigate datasets, graphs, and models and access their properties and specifi-cations.
+
+-   Output and Command Window: The output window, along with the command window, occupies the bottom part of the interface. It displays the results of executed commands, statistical output, and interactive messages. The command window, in particular, serves as a direct interface for entering commands and scripts, providing a degree of flexibility and control appreciated by advanced users.
+
+## Streamlined Data Management
+
+EViews excels in data management, making it easy to import, manipulate, and analyze datasets. Users can effortlessly load data from various sources, perform data transforma-tions, and create variables, ensuring that the information is ready for rigorous statistical analysis.
+
+## Econometrics and Time Series Tools
+
+One of EViews' defining features is its robust econometric and time series analysis capabilities It offers a wide range of models and tests, including ARIMA, regression analysis, cointegration testing, and more. Users can estimate models, conduct hypothesis tests, and generate forecasts with ease.
+
+## Graphical Visualization
+
+EViews supports data visualization with powerful graphing tools. Users can create a va-riety of charts and graphs to represent their data visually, aiding in the interpretation and presentation of results.
+
+## Customization and Automation
+
+EViews is highly customizable, allowing users to tailor the interface to their preferences. Additionally, it supports automation through programming, enabling users to create scripts and automate repetitive tasks.
+
+In summary, the EViews interface serves as a user-friendly and feature-rich enenvironmentor data analysis, econometrics, and time series modeling. Whether you're conducting research, making data-driven decisions, or learning the ropes of econometric analysis, EViews provides the tools and accessibility needed to navigate the complexities of data with confidence. As we explore its various facets, you'll discover its immense potential as a trusted companion in the world of statistical analysis and econometrics.
+
+## Setting up a New Project in EViews
+
+Setting up a new project in EViews involves several steps:
+
+**Step 1:** Launch EViews: Windows: After successfully installing EViews on a Windows-based system, follow these steps to launch it:
+
+Click on the Windows Start button in the lower-left corner of your screen. In the search bar, type "EViews" or "EViews 12" (the version number may vary depending on your installation). You should see EViews listed as an application. Click on it to launch the program.
+
+Mac: EViews is primarily a Windows application, so running it directly on macOS is not supported. However, you can run EViews on macOS using virtualization software like Parallels Desktop or VMware Fusion, which allows you to run Windows on your Mac and then install and launch EViews within the Windows environment.
+
+**Step 2:** Create a New Workfile
+
+Click on "File" in the menu bar
+
+-   Select "New" and then "Workfile."
+
+-   In the "Create Workfile" dialogue box, give your workfile a name in the WF space.
+
+    ![](images/dataDialogueMonth-01.png)
+
+-   Choose the frequency of your data (e.g., yearly, quarterly, monthly).
+
+-   Set the start and end date or period for your data.
+
+-   Click "OK" to create the workfile. After clicking on ok, the newly created work file is shown below. The workfile is created to accommodate monthly timeseries data from January (month 1) 1980 to December (month 12) 2021. There are two objects within the workfile area, the residual (written as resid) and the constant (c). The two objects will always appear automatically whenever a new workfile is created.
+
+    ![](images/newworkfileMONTHLY.png)
+
+**Step 3:** Import or Enter Data:
+
+Now that you have a workfile, you can add data to it. There are several ways to do this. Follow the steps below to import timeseries data into EViews.
+
+Click on "File" in the menu bar.
+
+![Import Data for File](images/2023-10-06_03-01-50.png)
+
+-   Select "Import" and choose the file format of your data (e.g., Excel, text). in this case the file we are importing is from an excel file.
+
+-   ![](images/importdata1-01.png){width="545"}
+
+-   Browse and select the data file you want to import.
+
+-   ![](images/importdata2.png)
+
+-   Follow the on-screen prompts to specify import settings (e.g., data range, format).
+
+    ![](images/importdata3.png)
+
+-   Click on next.
+
+-   Click "Finish" to import the data into your workfile.
+
+Your can choose to rename any of the series or vaiables imported into EViews.
+
+![](images/rename1.png)
+
+![](images/rename2.png)
+
+-   to rename a variable, right click on the variable to rename,
+
+![](images/rename1-01.png)
+
+-   click on rename, type the new variable name. in this case the variable brent is renamed oil_price. An underscore (\_) is added because eviews does not allow a space in variable names.
+
+-   In the next text box you can enter a description of the variable that has been renamed. In this case since brent is an international oil price, this will be indicated as the description for the variable. however, it is optional. The variable can still be renamed without providing a description.
+
+![](images/rename2-01.png)
+
+-   press enter key on your keyboard.
+
+![](images/rename4.png)
+
+-   save your work file on your computer to enable you reuse the document in future. If the workfile is properly saved, you can open it and work on it and save to update the changes made.
+
+-   while the workfile you want to save is still open
+
+-   Click on file
+
+-   Click on saveas as shown in the picture below
+
+![](images/saveworkfile1.png)
+
+-   A popup appears. Browse for the location you intend to save the workfile. Select a location you can remember. this is because you will need to get to that same location when ever you need to reuse the workfile.
+
+-   The file name textbar on the pop up window, type a name for the workfile you created. In this case, since the workfile contains data on various stock prices, the file is named stockindex.
+
+-   Click save
+
+-   ![](images/saveworkfile2.png)
+
+-   The file is saved.
+
+-   You can alway browse to the location you chose to save the workfile, double click on it to open it in case you desire to use it in future.

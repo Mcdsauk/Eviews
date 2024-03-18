@@ -1,0 +1,181 @@
+# Unit Root Tests
+
+## Understanding the concept of stationarity.
+
+Unit root tests are statistical procedures used in time series analysis to determine whether a time series data set exhibits a unit root, a common characteristic in non-stationary time series data. To understand unit root tests, it's essential to grasp the concept of stationarity.
+
+**What Is Stationarity?**
+
+**Stationarity** is a fundamental concept in time series analysis. A stationary time series is one whose statistical properties do not change over time. In other words, it has constant mean, constant variance, and the same covariance structure across different time periods.
+
+**The Role of Unit Roots**
+
+**Unit roots** are a common feature of non-stationary time series data. When a time series has a unit root, it essentially means that it has a root of 1 in its autoregressive (AR) equation. In other words, the series exhibits a random walk behavior, where each value depends heavily on the previous value, leading to trends and non-constant variances.
+
+Unit root tests are designed to detect the presence of unit roots in a time series. One of the most well-known unit root tests is the **Augmented Dickey-Fuller (ADF) test**, which assesses whether the AR coefficient in a time series model is equal to 1, indicating the presence of a unit root. If the null hypothesis of the ADF test is rejected, it suggests that the time series is stationary.
+
+## **Implications of Stationarity**
+
+Understanding stationarity is crucial in time series analysis for several reasons:
+
+1.  **Modeling**: Stationary time series are easier to model and forecast because they exhibit consistent statistical properties over time. Non-stationary data often require differencing or other transformations to achieve stationarity before modeling.
+
+2.  **Statistical Inference**: Inference and hypothesis testing are more reliable on stationary data since the properties of the data are constant. In non-stationary data, statistical tests may yield spurious results.
+
+3.  **Interpretation**: Stationary time series have clear and interpretable trends and patterns. Non-stationary data can make interpretation more challenging due to changing means and variances.
+
+4.  **Economic and Financial Analysis**: Many economic and financial time series are non-stationary. Detecting unit roots and achieving stationarity are critical in these domains for meaningful analysis and policy decisions.
+
+## Performing Augmented Dickey-Fuller (ADF) tests for unit roots.
+
+Performing an Augmented Dickey-Fuller (ADF) test for unit roots in EViews is a common procedure in time series analysis to determine whether a time series is stationary or possesses a unit root. Here are the steps to perform an ADF test in EViews:
+
+1.  **Open or Import Your Time Series Data**:
+
+    -   Launch EViews and open the workfile where your time series data is stored. If you don't have a workfile yet, create a new one and import your data. See the section on creating a new workfile and importing data into EViews for the procedure.
+
+2.  **View Your Time Series Data**:
+
+    -   In the workfile window, locate and click on the series representing your time series data. This will open the series view.
+
+3.  **Perform the ADF Test**:
+
+    -   In the series view window, go to the menu bar at the top and select "View" , "Unit Root Test."
+
+![Series Window](images/unitroot1.png)
+
+![](images/unitroot2adf.png)
+
+![](images/unitroot3adfoption.png)
+
+![](images/unitroot4.png)
+
+-   Choose the "Level" option to test for unit root using the augmented dickey fuller test at the level. The test at level means that the test is implemented on the data set without transformations such as taking first difference of the variable.
+
+-   Click on Ok to generate the ADF unit root result
+
+4.  **Run the Test**:
+
+    -   In the "Unit Root Test" dialog box that appears, choose the "ADF - Augmented Dickey-Fuller" test from the list of unit root tests. You can also specify other test options, such as specifying lags or a constant term.
+
+5.  **View the ADF Test Results**:
+
+    -   The ADF test results will appear in a new output window. This output provides information about the ADF statistic, p-value, critical values, and the test decision ( See the highlighted area.
+
+**Interpret the Results**:
+
+-   Examine the results to determine whether your time series is stationary or has a unit root. The key information to look for includes:
+
+-   The ADF test statistic: Compare this value to critical values to determine significance.
+
+-   The p-value: If the p-value is less than your chosen significance level (e.g., 0.05), you can reject the null hypothesis of a unit root.
+
+-   Critical values: These values are used to assess the significance of the ADF statistic.
+
+-   Based on the ADF test at level, the result shows the probability value is 0.4783 which is higher than 0.05 (5%) therefore the null hypothesis that the series is stationary should be rejected showing that the variable/series is non-stationary and thus has a unit root.
+
+-   Next step is to repeat the unit root process and this time, change the option from "Level" to "First Difference" the implement the ADF unit root test at first difference.
+
+![](images/unitroot4-01.png)
+
+### **Make Inferences**:
+
+-   Based on the results, you can draw conclusions about the stationarity of your time series. If the ADF test statistic is less than the critical values, and the p-value is small (typically less than 0.05), you can conclude that the time series is stationary. Otherwise, if the test statistic is greater than the critical values, you may fail to reject the null hypothesis of a unit root, indicating non-stationarity.
+
+7.  **Repeat and Explore**:
+
+    -   You can repeat the ADF test for different specifications (e.g., with different lags or including a constant term) to explore the stationarity properties of your data further.![](images/unitrootfirstdiffernce.png)
+
+![](images/unitrootresultfirstdiff.png)
+
+The result at first difference shows a p-value of -.0000 which is less than 0.05 or 5%, therefore reject the null hypothesis of non-stationary series. this means that after taking first first difference of the series brent the variable, which was non-stationary, becomes stationary.
+
+8.  **Save Your Work**:
+
+-   If you want to keep a record of the ADF test and its results, consider saving the output window or exporting it to a file for future reference.
+
+## Implementing Phillips-Perron unit root tests
+
+Implementing the Phillips-Perron unit root test in EViews is a useful way to check for the presence of a unit root in time series data, similar to the Augmented Dickey-Fuller (ADF) test. The Phillips-Perron test has different asymptotic properties, and it can be a valuable alternative. Here are the steps to perform a Phillips-Perron unit root test in EViews:
+
+1.  **Open or Import Your Time Series Data**
+
+    -   Launch EViews and open the workfile where your time series data is stored. If you don't have a workfile yet, create a new one and import your data.
+
+2.  **View Your Time Series Data**:
+
+    -   In the workfile window, locate and click on the series representing your time series data. This will open the series view.
+
+3.  **Perform the Phillips-Perron Test**:
+
+    -   In the series view window, go to the menu bar at the top and select "View", "Unit Root Test."
+
+    -   In the "Unit Root Test" dialog box that appears, choose the "PP - Phillips-Perron" test from the list of unit root tests. You can also specify other test options, such as specifying lags, a constant term, or the trend form (e.g., "No trend," "Constant," "Trend").
+
+![](images/unitroot3adfoption-01.png)
+
+4.  **Run the Test**:
+
+    -   After selecting the Phillips-Perron test and any desired options, click the "OK" button to run the test.
+
+![Philip Perron Unit root resut at First Difference](images/pp1result.png){width="400"}
+
+5.  **View the Phillips-Perron Test Results**:
+
+    ```         
+    -   The Phillips-Perron test results will appear in a new output window. This output provides information about the test statistic, p-value, critical values, and the test decision.
+    ```
+
+    ## **Interpret the Results of Phillip-Perron Test**
+
+    ```         
+    -   Examine the results to determine whether your time series is stationary or has a unit root. Key information to consider includes:
+
+    -   The Phillips-Perron test statistic: Compare this value to critical values to determine significance.
+
+    -   The p-value: If the p-value is less than your chosen significance level (e.g., 0.05), you can reject the null hypothesis of a unit root.
+
+    -   Critical values: These values are used to assess the significance of the Phillips-Perron test statistic.
+
+    In the first differencing step, the obtained result with a remarkably low p-value of 0.000 leads to the rejection of the null hypothesis, which suggests a nonstationary series, akin to a random walk, or the presence of a unit root. Instead, we accept the alternative hypothesis, indicating a stationary series.
+
+    Another way to interpret the unit root test is by comparing the absolute t-statistic value with the critical value of 5%, which is commonly employed in the fields of economics, finance, and other social sciences. In this instance, the ADF test statistic stands at 9.649966, significantly exceeding the 5% critical value of 3.430963. Consequently, we reject the null hypothesis, signifying that the series is indeed stationary.
+    ```
+
+    ### **Make Inferences**
+
+    -   Based on the results, you can draw conclusions about the stationarity of your time series. If the Phillips-Perron test statistic is less than the critical values, and the p-value is small (typically less than 0.05), you can conclude that the time series is stationary. Otherwise, if the test statistic is greater than the critical values, you may fail to reject the null hypothesis of a unit root, indicating non-stationarity.
+
+6.  **Repeat and Explore**:
+
+    -   You can repeat the Phillips-Perron test with different specifications (e.g., with different lags, constant term, or trend form) to explore the stationarity properties of your data further.
+
+7.  **Save Your Work**:
+
+    -   If you want to keep a record of the Phillips-Perron test and its results, consider saving the output window or exporting it to a file for future reference.
+
+it is important for the variables for your research to be stationary. Most timeseries data are not stationary at level however, they become stationary after first difference. The unit root test result will inform the next analysis you will carry out.
+
+Where one of the variables is non stationary, it is paramount to next test for cointegration. cointergration test in away check if a linear combination of two nonstationary series or variables will make them become stationary.
+
+## Important Note:
+
+When considering the stationary properties and potential cointegration among variables in your dataset, it's essential to choose the appropriate statistical model for your data analysis. Here's an expanded and improved explanation:
+
+**All Variables Stationary at Level**
+
+If all the variables in your dataset exhibit stationarity at their original levels, meaning they do not have a unit root, it suggests that no cointegration exists among these variables. In this case, Ordinary Least Squares (OLS) regression, which will be discussed in greater detail in upcoming chapters, is a suitable and sufficient method for conducting data analysis. OLS is particularly useful for examining the linear relationships between stationary variables without the need for cointegration considerations.
+
+**Variables Stationary at First Difference but Not Cointegrated**
+
+When the variables in your dataset are stationary after taking their first differences, and there is no evidence of cointegration among them, it may be appropriate to employ a Vector Autoregressive Model (VAR). The VAR model allows you to analyze the dynamic interdependencies between the differenced variables over time, making it a valuable tool for investigating the relationships among stationary, non-cointegrated variables.
+
+**Variables Cointegrated at First Difference**
+
+In cases where all the variables in your dataset are cointegrated at their first differences, and at least one cointegrating equation or variable can be identified, the Vector Error Correction Model (VECM) is a suitable choice for further analysis. The VECM is designed to explore the long-run equilibrium relationships and short-run dynamics between cointegrated variables while accounting for their short-term deviations.
+
+**Mixed Order of Integration Among Variables** In more complex scenarios where your dataset contains variables with mixed orders of integration, meaning some are stationary at level (particularly the dependent variable), while others are stationary at the first difference, the Autoregressive Distributed Lags (ARDL) model is an appropriate approach. The ARDL model is versatile, allowing for the analysis of relationships between variables with different orders of integration. It considers both short-term dynamics and long-term relationships, making it a valuable tool for examining mixed-order integration data.
+
+Selecting the right model based on the stationarity and cointegration properties of your variables is essential for meaningful data analysis and accurate model estimation. These choices will be further elaborated upon in the subsequent chapters of this book.
+
+In the next chapter, Cointegration is test is illustrated.

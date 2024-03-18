@@ -1,0 +1,61 @@
+# Bounds Cointegration
+
+The Bounds cointegration test is a method used to test for cointegration between time series variables. It involves estimating and testing the cointegrating vector and its bounds. Here are the steps to conduct a Bounds cointegration test in EViews:
+
+**Step 1: Load Your Data**
+
+-   Open EViews and load the time series data that you want to test for cointegration.
+
+-   click on quick  Estimate equation
+
+    ![](images/bounds1.png)
+
+-   A dialog box will appear as below
+
+![](images/bounds2.png)
+
+in the text area of the dialog box, type the variables you intend to test for cointegration. The dependent variable should come first followed by all the other independent variables.
+
+In the same dialog box, click on 'Method' \> select ADrdl from the options.
+
+After clicking on Ardl, the dialog box below will pop up.
+
+If you have already conducted the lag selection test to determine the maximum lags, enter the value for maximum lags for the dependent variable and the independent variables or regressors. In the example, we will maintain the default values of 4 for dependent and regressors.
+
+![](images/bounds3.png)
+
+Click Ok
+
+**Step 2: Estimate the Bounds Test**
+
+After creating the group object, click on "Proc" in the group window, and then select "Cointegration" and "Bounds Test." This will open a dialog box for setting up the test.
+
+the following pop up results will appear:
+
+![](images/bounds5.png)
+
+Click on View Coefficient Diagnostics Bounds Test
+
+![](images/bounds6.png)
+
+**Step 3: Interpret the Results**
+
+Examine the test results, which typically include the test statistics and critical values. Look for the test statistic, which will be compared to critical values to determine whether cointegration is present. Pay attention to the test statistic's significance level. If the test statistic exceeds the critical value, you may conclude that cointegration exists.
+
+### Bounds Test Criteria
+
+    -   The bounds test is based on the null hypothesis of No longrun relationship/cointegration.
+
+    -   The null hypothesis should be rejected if the F-statistics value is greater that the upper (I1 Bounds)
+
+    -   if the F statistics is smaller than the lower bound (I0 bound) value, then the null hypothesis of no longrun relationship among variables is not rejected and therefore there is no cointegration.
+
+    -   where the F statistics value lies between the I1 and the I0 value, the result is said to be inconclusive.
+
+    -   In this case of this example, the F-statistics 0.394154 is smaller than the I1 value at 5% therefore the null hypothesis of no longrun relationship cannot be rejected at 5% level of significant. Note that the null hypothesis can also not be rejected at 10% and 1% as well.
+
+**Step 4: Report the Results**
+
+-   In your analysis or report, make sure to clearly state the results of the Bounds cointegration test and provide the relevant statistics, significance levels, and critical values. Explain the implications of your findings for your research or analysis.
+
+![](images/chart-01.png)

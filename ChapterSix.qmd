@@ -1,0 +1,97 @@
+# Post Estimation tests
+
+After conducting a regression analysis in EViews, there are several post-estimation tests and diagnostics you can implement to assess the quality of your model and the validity of your results. Here are some important post-estimation tests and diagnostics to consider: Some of the common post-estimation tests used in timeseries analysis in EViews include the normality test, Linearity test, Serial Correlation and Heteroschedascticity test. These tests are briefly explained and the steps to implement each test are provided.
+
+Note that the post-estimation tests are carried out after a regression model has been estimated. the tests are ment to check the quality of the model and see if they complied or violated the OLS major assumption.
+
+![](images/olsreg-01.png){fig-align="right"}
+
+**Normality Test**
+
+A normality test checks whether the residuals from a regression model follow a normal distribution. Common tests include the Jarque-Bera and Shapiro-Wilk tests.
+
+**Importance of Normality Test** 
+
+-   Normally distributed residuals are a fundamental assumption of linear regression models. Departures from normality can lead to incorrect parameter estimates and confidence intervals.
+
+-   It helps ensure that statistical inference, such as hypothesis testing and confidence intervals, is valid.
+
+-   Non-normal residuals may indicate omitted variables or a poorly specified model.
+
+![](images/ols_normality-01.png)
+
+![](images/OLS_normality_Histogram.png)
+
+**Heteroskedasticity Test**
+
+    -   The Breusch-Pagan test assesses the presence of heteroskedasticity, where the variance of the residuals is not constant across the range of the independent variables.
+
+**Importance**
+
+    -   Heteroskedasticity violates the assumption of constant variance and can lead to inefficient and biased parameter estimates.
+
+    -   It is vital for the validity of hypothesis tests and the construction of reliable confidence intervals.
+
+    -   Detecting heteroskedasticity helps identify possible transformations or weighting schemes to correct for it.
+
+![](images/ols_hetero-01.png)
+
+![](images/ols_arch.png)
+
+![Heteroschedasticity Test - arch](images/ols_hetero_arch.png)
+
+## Serial Correlation Test
+
+### Lagrange Multiplier
+
+The LM (Lagrange Multiplier) test, also known as the Breusch-Godfrey test, checks for serial correlation in the residuals. It evaluates whether errors are correlated over time by regressing the residuals on lagged residuals.
+
+## Importance
+
+-   Serial correlation violates the assumption of independent and identically distributed (i.i.d.) residuals, which is crucial for valid hypothesis tests.
+
+-   Detecting serial correlation helps identify omitted variables or misspecified lag structures.
+
+-   It ensures that the estimated coefficients are efficient and have valid standard errors.
+
+![OLS regression output](images/olsreg.png)
+
+![](images/olsreg2.png)
+
+![Lag selection for Serial Correlation Test](images/olsserialcorrLags.png)
+
+## Serial Correlation (Autocorrelation) Tests
+
+### Langrang Multiplier (LM) test
+
+Assess the presence of autocorrelation in the residuals.
+
+![](images/olsserialcorr.png)
+
+![](images/ols_hetero.png)
+
+## Multicollinearity
+
+### Variance Inflation Factor (VIF)
+
+Calculate VIF values to identify multicollinearity among the independent variables.
+
+![](images/ols_VIF.png)
+
+![](images/olsbreakpoint.png)
+
+![](images/ols_wald.png)
+
+## Linearity Test
+
+### Linearity Using Ramsey RESET Test
+
+The Ramsey RESET test (Regression Specification Error Test) assesses whether the model has omitted nonlinearity in its functional form. It typically involves adding squared or cubed terms of the predictors.
+
+### Importance of Linearity Test
+
+-   A linear model assumes that the relationships between the predictors and the response variable are linear. Deviations from linearity can lead to misspecification.
+
+-   Ensuring linearity is essential for making reliable predictions and valid hypothesis tests.
+
+-   Identifying omitted nonlinearity helps improve the model's explanatory power.

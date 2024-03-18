@@ -1,0 +1,39 @@
+project:
+  type: book
+
+book:
+  title: "Basic Timeseries Analysis in EViews"
+  author: "Musa Dasauki C."
+  date: "10/8/2023"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - Chapter One.qmd
+    - ChapterTwo.qmd
+    - transformation.qmd
+    - Chapter Three.qmd
+    - Chapter Four.qmd
+    - Chapter FourB.qmd
+    - Chapter Five.qmd
+    - ChapterSix.qmd
+    
+output:
+  quarto::pdf_document:
+    pandoc_args: "--pdf-engine=xelatex"
+    includes:
+      in_header: preamble.tex
+    koma_script:
+      headings:
+        - \renewcommand{\chapterheadstartvskip}{\vspace*{1cm}}  # Example tweak for chapters
+        - \renewcommand{\sectionlinesformat}[4]{\textbf{#4}\hspace*{1cm}}  # Example tweak for sections
+
+bibliography: references.bib
+block-headings: false
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual

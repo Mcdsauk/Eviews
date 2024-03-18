@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: d9a8ed12-5ca1-451b-8279-d650997b141d
+      url: 'https://mdasauki.quarto.pub/basic-timeseries-analysis-in-eviews'
